@@ -1,0 +1,23 @@
+{
+  "name": "fcolor",
+  "version": "1.0.0",
+  "description": "first color",
+  "main": "index.js",
+  "bin": "bin/fcolor",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qianghuang/first-color.git"
+  },
+  "keywords": [
+    "color"
+  ],
+  "author": "qianghuang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qianghuang/first-color/issues"
+  },
+  "homepage": "https://github.com/qianghuang/first-color#readme"
+}

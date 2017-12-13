@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+const prefix = '\033[';
+const ends = 'm';
+const reset = prefix + '0' + ends;
+const bold = prefix + '23' + ends;
+const colorsVal = [];
+const len = 6;
+const args = process.argv.slice(2);
+
+for(var i = 0; i < len; i++) {
+    colorsVal[i] = 31 + i;
+}
+
+function randomColorMsg(msg) {
+    var msgArr;
+
+    if(msg) {
+        msgArr = msg.split('');
+    }
+
+    msgArr = msgArr.map(function(c) {
+        return prefix + colorsVal[Math.round(Math.random() * (len -1))] + ends + c + reset;
+    });
+
+    console.log(msgArr.join(''));
+}
+
+if(args.length < 1) {
+    randomColorMsg('请输入参数');
+    return;
+}
+randomColorMsg(args[0]);
